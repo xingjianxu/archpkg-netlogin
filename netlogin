@@ -1,0 +1,6 @@
+#！/bin/sh
+source /etc/conf.d/netlogin
+echo "Attemp to login to IMNU intra-net..."
+curl 'http://210.31.176.3:9090/zportal/login/do' \
+  --data-raw 'qrCodeId=%E8%AF%B7%E8%BE%93%E5%85%A5%E7%BC%96%E5%8F%B7&username=USERNAME&pwd=$PASSWORD&validCode=%E9%AA%8C%E8%AF%81%E7%A0%81&validCodeFlag=false&ssid=c3fd4043c44cbc46&mac=ed493a28517436fe0674011afe600abb&t=wireless-v2&wlanacname=f7995364a600bc42&url=b34521a521344667bff74ed028a36366&nasip=4b89a882ec7b6d8b1d34cd3b4f721555&wlanuserip=7f5a0ae97517d69265a9606fb3690802' \
+  --insecure

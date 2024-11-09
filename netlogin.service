@@ -1,0 +1,11 @@
+[Unit]
+Description=Imnu Intra-network Login
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=sh /usr/bin/netlogin
+
+[Install]
+WantedBy=multi-user.target
